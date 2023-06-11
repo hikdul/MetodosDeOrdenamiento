@@ -1,5 +1,7 @@
 
-export const shellSort =(arr:number[]) =>
+import { IData } from "./interface"
+
+export const shellSort =(arr:number[]): IData =>
 {
     const start = performance.now()
     const length = arr.length
@@ -19,6 +21,5 @@ export const shellSort =(arr:number[]) =>
         distance = Math.floor(distance / 2)
     }
     const end = performance.now()
-    const worktime = -(start-end)
-    return{arr,worktime}
+    return{alg:'Shell Sort',arr, worktime: end - start}
 }

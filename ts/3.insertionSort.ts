@@ -1,5 +1,7 @@
 
-export const insertionSort = (arr: number[])=>
+import { IData } from "./interface"
+
+export const insertionSort = (arr: number[]): IData =>
 {
     const start = performance.now()
     for (let i = 0; i < arr.length; i++) {
@@ -14,6 +16,6 @@ export const insertionSort = (arr: number[])=>
     }
     const end = performance.now()
     const worktime = -(start-end)
-    return {arr, worktime}   
+    return {alg:'Insertion Sort', arr, worktime: end - start}   
 
 }

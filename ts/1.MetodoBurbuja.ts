@@ -1,5 +1,6 @@
+import { IData } from "./interface"
 
-export const burbleSort = (arr: number[]) => {
+export const burbleSort = (arr: number[]): IData => {
     const start = performance.now()
     const length = arr.length
     for (let i = 0; i < length; i++)
@@ -7,6 +8,5 @@ export const burbleSort = (arr: number[]) => {
             if (arr[j] > arr[j + 1])
                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
     const end = performance.now()
-    const worktime = - (start - end)
-    return { arr, worktime }
+    return { alg: 'Burble Sort', arr, worktime: end - start }
 }

@@ -1,4 +1,7 @@
-export const selectionSort = (arr: number[]) => {
+
+import { IData } from "./interface"
+
+export const selectionSort = (arr: number[]): IData => {
     const start = performance.now()
     const length = arr.length
     for (let i = 0; i < length; i++) {
@@ -12,5 +15,5 @@ export const selectionSort = (arr: number[]) => {
     }
     const end = performance.now()
     const worktime = -(start - end)
-    return { arr, worktime }
+    return { alg:'Selection Sort', arr, worktime }
 }
